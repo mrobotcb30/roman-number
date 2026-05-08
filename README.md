@@ -231,7 +231,7 @@ mvn verify
 
 ---
 
-# 🌿 Workflow Git
+# 🔧 Workflow Git
 
 Il progetto segue un workflow professionale basato su:
 
