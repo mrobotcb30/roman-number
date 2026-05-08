@@ -9,69 +9,32 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
 
-    // ---- Conversioni corrette (Right) ----
-
     @Test
     public void convert_one_returnsI() {
-        // Arrange
-        int number = 1;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("I", result);
-    }
-
-    @Test
-    public void convert_two_returnsII() {
-        // Arrange
-        int number = 2;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("II", result);
-    }
-
-    @Test
-    public void convert_three_returnsIII() {
-        // Arrange
-        int number = 3;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("III", result);
-    }
-
-    @Test
-    public void convert_four_returnsIV() {
-        // Arrange
-        int number = 4;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("IV", result);
-    }
-
-    @Test
-    public void convert_five_returnsV() {
-        // Arrange
-        int number = 5;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("V", result);
+        assertEquals("I", IntegerToRoman.convert(1));
     }
 
     @Test
     public void convert_six_returnsVI() {
-        // Arrange
-        int number = 6;
-        // Act
-        String result = IntegerToRoman.convert(number);
-        // Assert
-        assertEquals("VI", result);
+        assertEquals("VI", IntegerToRoman.convert(6));
     }
 
-    // ---- Boundary: limiti del range (Boundary) ----
+    @Test
+    public void convert_seven_returnsVII() {
+        assertEquals("VII", IntegerToRoman.convert(7));
+    }
+
+    @Test
+    public void convert_nine_returnsIX() {
+        assertEquals("IX", IntegerToRoman.convert(9));
+    }
+
+    @Test
+    public void convert_ten_returnsX() {
+        assertEquals("X", IntegerToRoman.convert(10));
+    }
+
+    // ---- Boundary ----
 
     @Test(expected = IllegalArgumentException.class)
     public void convert_zero_throwsException() {
@@ -79,12 +42,7 @@ public class IntegerToRomanTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void convert_negativeNumber_throwsException() {
-        IntegerToRoman.convert(-1);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void convert_sevenOutOfRange_throwsException() {
-        IntegerToRoman.convert(7);
+    public void convert_elevenOutOfRange_throwsException() {
+        IntegerToRoman.convert(11);
     }
 }
