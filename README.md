@@ -1,6 +1,5 @@
 # 🧮 Arabo-Roman Converter (`roman-number`)
 
-> Progetto sviluppato per il corso di **Ingegneria del Software** presso l’Università degli Studi di Padova.
 
 Un convertitore completo per numeri romani progettato seguendo pratiche moderne di **Continuous Integration**, **Testing**, **Build Automation** e **Code Quality**.
 
