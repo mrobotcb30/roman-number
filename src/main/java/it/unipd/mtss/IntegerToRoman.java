@@ -6,12 +6,12 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        if (number < 1 || number > 50) {
-            throw new IllegalArgumentException("Numero fuori range (1-50)");
+        if (number < 1 || number > 500) {
+            throw new IllegalArgumentException("Numero fuori range (1-500)");
         }
 
-        int[] values =     {50,  40,   10,  9,    5,   4,    1};
-        String[] symbols = {"L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] values =     {500, 400,  100, 90,   50,  40,   10,  9,    5,   4,    1};
+        String[] symbols = {"D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
         StringBuilder roman = new StringBuilder();
         for (int i = 0; i < values.length; i++) {

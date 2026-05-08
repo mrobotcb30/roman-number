@@ -10,22 +10,27 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void convert_forty_returnsXL() {
-        assertEquals("XL", IntegerToRoman.convert(40));
+    public void convert_one_returnsI() {
+        assertEquals("I", IntegerToRoman.convert(1));
     }
 
     @Test
-    public void convert_fortyNine_returnsXLIX() {
-        assertEquals("XLIX", IntegerToRoman.convert(49));
+    public void convert_hundred_returnsC() {
+        assertEquals("C", IntegerToRoman.convert(100));
     }
 
     @Test
-    public void convert_fifty_returnsL() {
-        assertEquals("L", IntegerToRoman.convert(50));
+    public void convert_fourHundred_returnsCD() {
+        assertEquals("CD", IntegerToRoman.convert(400));
+    }
+
+    @Test
+    public void convert_fiveHundred_returnsD() {
+        assertEquals("D", IntegerToRoman.convert(500));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void convert_fiftyOneOutOfRange_throwsException() {
-        IntegerToRoman.convert(51);
+    public void convert_fiveHundredOne_throwsException() {
+        IntegerToRoman.convert(501);
     }
 }

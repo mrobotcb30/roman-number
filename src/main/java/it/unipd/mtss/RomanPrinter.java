@@ -21,43 +21,26 @@ public class RomanPrinter {
     }
 
     private static String getCharRow(char c, int row) {
-        String[] iArt = {
-            " _____  ",
-            "|_   _| ",
-            "  | |   ",
-            "  | |   ",
-            " _| |_  ",
-            "|_____| "
-        };
-        String[] vArt = {
-            " __      __ ",
-            " \\ \\    / / ",
-            "  \\ \\  / /  ",
-            "   \\ \\/ /   ",
-            "    \\  /    ",
-            "     \\/     "
-        };
-        String[] xArt = {
-            " __  __ ",
-            " \\ \\/ / ",
-            "  \\  /  ",
-            "  /  \\  ",
-            " / /\\ \\ ",
-            "/_/  \\_\\"
-        };
-        String[] lArt = {
-            " _       ",
-            "| |      ",
-            "| |      ",
-            "| |      ",
-            "| |____  ",
-            "|______| "
+        String[] iArt = {" _____  ", "|_   _| ", "  | |   ", "  | |   ", " _| |_  ", "|_____| "};
+        String[] vArt = {" __      __ ", " \\ \\    / / ", "  \\ \\  / /  ", "   \\ \\/ /   ", "    \\  /    ", "     \\/     "};
+        String[] xArt = {" __  __ ", " \\ \\/ / ", "  \\  /  ", "  /  \\  ", " / /\\ \\ ", "/_/  \\_\\"};
+        String[] lArt = {" _       ", "| |      ", "| |      ", "| |      ", "| |____  ", "|______| "};
+        String[] cArt = {"  _____  ", " / ____| ", "| |      ", "| |      ", "| |____  ", " \\_____| "};
+        String[] dArt = {
+            " _____   ",
+            "|  __ \\  ",
+            "| |  | | ",
+            "| |  | | ",
+            "| |__| | ",
+            "|_____/  "
         };
 
         if (c == 'I') { return iArt[row]; }
         if (c == 'V') { return vArt[row]; }
         if (c == 'X') { return xArt[row]; }
         if (c == 'L') { return lArt[row]; }
+        if (c == 'C') { return cArt[row]; }
+        if (c == 'D') { return dArt[row]; }
         
         throw new IllegalArgumentException("Carattere non supportato");
     }
