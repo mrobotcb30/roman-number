@@ -10,25 +10,21 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void print_twenty_outputContainsXXAsciiArt() {
-        // Arrange
-        int number = 20;
-        // Act
-        String result = RomanPrinter.print(number);
-        // Assert (Due X affiancate)
+    public void print_hundred_outputContainsCAsciiArt() {
+        String result = RomanPrinter.print(100);
         assertEquals(
-            " __  __  __  __ \n" +
-            " \\ \\/ /  \\ \\/ / \n" +
-            "  \\  /    \\  /  \n" +
-            "  /  \\    /  \\  \n" +
-            " / /\\ \\  / /\\ \\ \n" +
-            "/_/  \\_\\/_/  \\_\\\n",
+            "  _____  \n" +
+            " / ____| \n" +
+            "| |      \n" +
+            "| |      \n" +
+            "| |____  \n" +
+            " \\_____| \n",
             result
         );
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void print_twentyOne_throwsException() {
-        RomanPrinter.print(21);
+    public void print_hundredOne_throwsException() {
+        RomanPrinter.print(101);
     }
 }
