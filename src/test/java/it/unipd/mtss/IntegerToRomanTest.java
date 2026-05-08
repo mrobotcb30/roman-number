@@ -36,8 +36,8 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_ninety_returnsXC() {
-        assertEquals("XC", IntegerToRoman.convert(90));
+    public void convert_fourHundred_returnsCD() {
+        assertEquals("CD", IntegerToRoman.convert(400));
     }
 
     @Test
