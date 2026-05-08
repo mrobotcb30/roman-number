@@ -25,13 +25,14 @@ public class RomanPrinter {
         String[] vArt = {" __      __ ", " \\ \\    / / ", "  \\ \\  / /  ", "   \\ \\/ /   ", "    \\  /    ", "     \\/     "};
         String[] xArt = {" __  __ ", " \\ \\/ / ", "  \\  /  ", "  /  \\  ", " / /\\ \\ ", "/_/  \\_\\"};
         String[] lArt = {" _       ", "| |      ", "| |      ", "| |      ", "| |____  ", "|______| "};
-        String[] cArt = {
-            "  _____  ",
-            " / ____| ",
-            "| |      ",
-            "| |      ",
-            "| |____  ",
-            " \\_____| "
+        String[] cArt = {"  _____  ", " / ____| ", "| |      ", "| |      ", "| |____  ", " \\_____| "};
+        String[] dArt = {
+            " _____   ",
+            "|  __ \\  ",
+            "| |  | | ",
+            "| |  | | ",
+            "| |__| | ",
+            "|_____/  "
         };
 
         if (c == 'I') { return iArt[row]; }
@@ -39,6 +40,7 @@ public class RomanPrinter {
         if (c == 'X') { return xArt[row]; }
         if (c == 'L') { return lArt[row]; }
         if (c == 'C') { return cArt[row]; }
+        if (c == 'D') { return dArt[row]; }
         
         throw new IllegalArgumentException("Carattere non supportato");
     }
