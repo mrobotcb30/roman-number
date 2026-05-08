@@ -9,10 +9,15 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
 
+
     // ---- Conversioni corrette (Right) ----
 
     @Test
     public void convert_one_returnsI() {
+
+    @Test
+    public void testConvertOne() {
+
         // Arrange
         int number = 1;
         // Act
@@ -86,5 +91,11 @@ public class IntegerToRomanTest {
     @Test(expected = IllegalArgumentException.class)
     public void convert_sevenOutOfRange_throwsException() {
         IntegerToRoman.convert(7);
+    }
+
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testUnderRange() {
+        IntegerToRoman.convert(0);
     }
 }
