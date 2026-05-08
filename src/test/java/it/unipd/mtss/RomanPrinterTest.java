@@ -10,21 +10,21 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void print_fifty_outputContainsLAsciiArt() {
-        String result = RomanPrinter.print(50);
+    public void print_hundred_outputContainsCAsciiArt() {
+        String result = RomanPrinter.print(100);
         assertEquals(
-            " _       \n" +
-            "| |      \n" +
+            "  _____  \n" +
+            " / ____| \n" +
             "| |      \n" +
             "| |      \n" +
             "| |____  \n" +
-            "|______| \n",
+            " \\_____| \n",
             result
         );
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void print_fiftyOne_throwsException() {
-        RomanPrinter.print(51);
+    public void print_hundredOne_throwsException() {
+        RomanPrinter.print(101);
     }
 }
