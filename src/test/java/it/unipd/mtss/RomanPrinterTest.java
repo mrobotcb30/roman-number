@@ -42,6 +42,36 @@ public class RomanPrinterTest {
         assertNotNull(result);
     }
 
+    @Test
+    public void print_four_returnsNonNullString() {
+        // Arrange
+        int number = 4;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertNotNull(result);
+    }
+
+    @Test
+    public void print_five_returnsNonNullString() {
+        // Arrange
+        int number = 5;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertNotNull(result);
+    }
+
+    @Test
+    public void print_six_returnsNonNullString() {
+        // Arrange
+        int number = 6;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertNotNull(result);
+    }
+
     // ---- Contenuto corretto (Right) ----
 
     @Test
@@ -63,19 +93,55 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void print_three_outputContainsIIIAsciiArt() {
+    public void print_five_outputContainsVAsciiArt() {
         // Arrange
-        int number = 3;
+        int number = 5;
         // Act
         String result = RomanPrinter.print(number);
         // Assert
         assertEquals(
-            " _____   _____   _____  \n" +
-            "|_   _| |_   _| |_   _| \n" +
-            "  | |     | |     | |   \n" +
-            "  | |     | |     | |   \n" +
-            " _| |_   _| |_   _| |_  \n" +
-            "|_____| |_____| |_____| \n",
+            "__   __ \n" +
+            "\\ \\ / / \n" +
+            " \\ V /  \n" +
+            "  > <   \n" +
+            " / . \\  \n" +
+            "/_/ \\_\\ \n",
+            result
+        );
+    }
+
+    @Test
+    public void print_four_outputContainsIVAsciiArt() {
+        // Arrange
+        int number = 4;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(
+            " _____  __   __ \n" +
+            "|_   _| \\ \\ / / \n" +
+            "  | |    \\ V /  \n" +
+            "  | |     > <   \n" +
+            " _| |_   / . \\  \n" +
+            "|_____| /_/ \\_\\ \n",
+            result
+        );
+    }
+
+    @Test
+    public void print_six_outputContainsVIAsciiArt() {
+        // Arrange
+        int number = 6;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(
+            "__   __  _____  \n" +
+            "\\ \\ / / |_   _| \n" +
+            " \\ V /    | |   \n" +
+            "  > <     | |   \n" +
+            " / . \\   _| |_  \n" +
+            "/_/ \\_\\ |_____| \n",
             result
         );
     }
@@ -88,8 +154,7 @@ public class RomanPrinterTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void print_fourOutOfRange_throwsException() {
-        // Dato che testiamo solo fino a 3, il 4 diventa il nuovo limite superiore
-        RomanPrinter.print(4);
+    public void print_sevenOutOfRange_throwsException() {
+        RomanPrinter.print(7);
     }
 }

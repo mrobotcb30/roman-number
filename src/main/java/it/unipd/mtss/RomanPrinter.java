@@ -11,11 +11,9 @@ public class RomanPrinter {
 
     private static String printAsciiArt(String romanNumber) {
         String result = "";
-        for (int i = 0; i < 6; i++) { // Supponendo un'altezza di 6 righe per l'ASCII Art
+        for (int i = 0; i < 6; i++) {
             for (char c : romanNumber.toCharArray()) {
-                if (c == 'I') {
-                    result += getCharRow(c, i);
-                }
+                result += getCharRow(c, i);
             }
             result += "\n";
         }
@@ -23,7 +21,6 @@ public class RomanPrinter {
     }
 
     private static String getCharRow(char c, int row) {
-        // Implementa qui le righe per 'I' basandoti sull'esempio del PDF
         String[] iArt = {
             " _____  ",
             "|_   _| ",
@@ -32,6 +29,20 @@ public class RomanPrinter {
             " _| |_  ",
             "|_____| "
         };
-        return iArt[row];
+        String[] vArt = {
+            "__   __ ",
+            "\\ \\ / / ",
+            " \\ V /  ",
+            "  > <   ",
+            " / . \\  ",
+            "/_/ \\_\\ "
+        };
+        if (c == 'I') {
+            return iArt[row];
+        } else if (c == 'V') {
+            return vArt[row];
+        }
+        throw new IllegalArgumentException("Carattere romano non supportato: " + c);
     }
 }
+
