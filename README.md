@@ -169,6 +169,10 @@ L’obiettivo della pipeline è garantire:
 - qualità costante del codice.
 
 ---
+### 🔖 Status build
+
+![CI](https://github.com/mrobotcb30/romain-number/actions/workflows/ci.yml/badge.svg)
+---
 
 # 🧪 Testing
 
