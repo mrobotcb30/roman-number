@@ -40,10 +40,6 @@ public class IntegerToRomanTest {
         assertEquals("CD", IntegerToRoman.convert(400));
     }
 
-    @Test
-    public void convert_fourHundred_returnsCD() {
-        assertEquals("CD", IntegerToRoman.convert(400));
-    }
 
     @Test
     public void convert_nineHundredNinetyNine_returnsCMXCIX() {
