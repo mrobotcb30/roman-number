@@ -5,6 +5,29 @@
 package it.unipd.mtss;
 
 public class RomanPrinter {
+
+    private static final String[] I_ART = {
+        " _____  ", "|_   _| ", "  | |   ", "  | |   ", " _| |_  ", "|_____| "
+    };
+    private static final String[] V_ART = {
+        " __      __ ", " \\ \\    / / ", "  \\ \\  / /  ", "   \\ \\/ /   ", "    \\  /    ", "     \\/     "
+    };
+    private static final String[] X_ART = {
+        " __  __ ", " \\ \\/ / ", "  \\  /  ", "  /  \\  ", " / /\\ \\ ", "/_/  \\_\\"
+    };
+    private static final String[] L_ART = {
+        " _       ", "| |      ", "| |      ", "| |      ", "| |____  ", "|______| "
+    };
+    private static final String[] C_ART = {
+        "  _____  ", " / ____| ", "| |      ", "| |      ", "| |____  ", " \\_____| "
+    };
+    private static final String[] D_ART = {
+        " _____   ", "|  __ \\  ", "| |  | | ", "| |  | | ", "| |__| | ", "|_____/  "
+    };
+    private static final String[] M_ART = {
+        " __  __  ", "|  \\/  | ", "| \\  / | ", "| |\\/| | ", "| |  | | ", "|_|  |_| "
+    };
+
     public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
@@ -21,25 +44,15 @@ public class RomanPrinter {
     }
 
     private static String getCharRow(char c, int row) {
-        String[] iArt = {" _____  ", "|_   _| ", "  | |   ", "  | |   ", " _| |_  ", "|_____| "};
-        String[] vArt = {" __      __ ", " \\ \\    / / ", "  \\ \\  / /  ", "   \\ \\/ /   ", "    \\  /    ", "     \\/     "};
-        String[] xArt = {" __  __ ", " \\ \\/ / ", "  \\  /  ", "  /  \\  ", " / /\\ \\ ", "/_/  \\_\\"};
-        String[] lArt = {" _       ", "| |      ", "| |      ", "| |      ", "| |____  ", "|______| "};
-        String[] cArt = {
-            "  _____  ",
-            " / ____| ",
-            "| |      ",
-            "| |      ",
-            "| |____  ",
-            " \\_____| "
-        };
-
-        if (c == 'I') { return iArt[row]; }
-        if (c == 'V') { return vArt[row]; }
-        if (c == 'X') { return xArt[row]; }
-        if (c == 'L') { return lArt[row]; }
-        if (c == 'C') { return cArt[row]; }
-        
-        throw new IllegalArgumentException("Carattere non supportato");
+        switch (c) {
+            case 'I': return I_ART[row];
+            case 'V': return V_ART[row];
+            case 'X': return X_ART[row];
+            case 'L': return L_ART[row];
+            case 'C': return C_ART[row];
+            case 'D': return D_ART[row];
+            case 'M': return M_ART[row];
+            default: throw new IllegalArgumentException("Carattere non supportato");
+        }
     }
 }
