@@ -6,8 +6,8 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        if (number < 1 || number > 10) {
-            throw new IllegalArgumentException("Numero fuori range (1-10)");
+        if (number < 1 || number > 20) {
+            throw new IllegalArgumentException("Numero fuori range (1-20)");
         }
 
         int[] values =     {10,  9,    5,   4,    1};

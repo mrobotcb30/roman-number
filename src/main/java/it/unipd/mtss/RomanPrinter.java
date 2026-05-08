@@ -21,35 +21,13 @@ public class RomanPrinter {
     }
 
     private static String getCharRow(char c, int row) {
-        String[] iArt = {
-            " _____  ",
-            "|_   _| ",
-            "  | |   ",
-            "  | |   ",
-            " _| |_  ",
-            "|_____| "
-        };
-        String[] vArt = {
-            " __      __ ",
-            " \\ \\    / / ",
-            "  \\ \\  / /  ",
-            "   \\ \\/ /   ",
-            "    \\  /    ",
-            "     \\/     "
-        };
-        String[] xArt = {
-            " __  __ ",
-            " \\ \\/ / ",
-            "  \\  /  ",
-            "  /  \\  ",
-            " / /\\ \\ ",
-            "/_/  \\_\\"
-        };
+        String[] iArt = {" _____  ", "|_   _| ", "  | |   ", "  | |   ", " _| |_  ", "|_____| "};
+        String[] vArt = {" __      __ ", " \\ \\    / / ", "  \\ \\  / /  ", "   \\ \\/ /   ", "    \\  /    ", "     \\/     "};
+        String[] xArt = {" __  __ ", " \\ \\/ / ", "  \\  /  ", "  /  \\  ", " / /\\ \\ ", "/_/  \\_\\"};
 
         if (c == 'I') { return iArt[row]; }
         if (c == 'V') { return vArt[row]; }
         if (c == 'X') { return xArt[row]; }
-        
-        throw new IllegalArgumentException("Carattere romano non supportato: " + c);
+        throw new IllegalArgumentException("Carattere non supportato");
     }
 }
