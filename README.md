@@ -277,8 +277,7 @@ Questo progetto dimostra competenze pratiche in:
 
 # 🏁 Conclusione
 
-`roman-number` rappresenta un progetto completo di Ingegneria del Software sviluppato secondo standard moderni di qualità e automazione.
-
+`roman-number` rappresenta un progetto completo di Metodi e Tecnologie per lo sviluppo software. 
 L’attenzione alla struttura del codice, ai test automatici e alla Continuous Integration garantisce un software affidabile, mantenibile e facilmente estendibile.
 
 
