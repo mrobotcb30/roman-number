@@ -170,7 +170,7 @@ L’obiettivo della pipeline è garantire:
 ---
 # 🔖 Status build
 
-![CI](https://github.com/mrobotcb30/romain-number/actions/workflows/build.yml/badge.svg)
+![build](https://github.com/mrobotcb30/roman-number/actions/workflows/build.yml/badge.svg)
 ---
 
 # 🧪 Testing
