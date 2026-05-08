@@ -45,11 +45,20 @@ public class RomanPrinter {
             " / /\\ \\ ",
             "/_/  \\_\\"
         };
+        String[] lArt = {
+            " _       ",
+            "| |      ",
+            "| |      ",
+            "| |      ",
+            "| |____  ",
+            "|______| "
+        };
 
         if (c == 'I') { return iArt[row]; }
         if (c == 'V') { return vArt[row]; }
         if (c == 'X') { return xArt[row]; }
+        if (c == 'L') { return lArt[row]; }
         
-        throw new IllegalArgumentException("Carattere romano non supportato: " + c);
+        throw new IllegalArgumentException("Carattere non supportato");
     }
 }

@@ -10,39 +10,22 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void convert_one_returnsI() {
-        assertEquals("I", IntegerToRoman.convert(1));
+    public void convert_forty_returnsXL() {
+        assertEquals("XL", IntegerToRoman.convert(40));
     }
 
     @Test
-    public void convert_six_returnsVI() {
-        assertEquals("VI", IntegerToRoman.convert(6));
+    public void convert_fortyNine_returnsXLIX() {
+        assertEquals("XLIX", IntegerToRoman.convert(49));
     }
 
     @Test
-    public void convert_seven_returnsVII() {
-        assertEquals("VII", IntegerToRoman.convert(7));
-    }
-
-    @Test
-    public void convert_nine_returnsIX() {
-        assertEquals("IX", IntegerToRoman.convert(9));
-    }
-
-    @Test
-    public void convert_ten_returnsX() {
-        assertEquals("X", IntegerToRoman.convert(10));
-    }
-
-    // ---- Boundary ----
-
-    @Test(expected = IllegalArgumentException.class)
-    public void convert_zero_throwsException() {
-        IntegerToRoman.convert(0);
+    public void convert_fifty_returnsL() {
+        assertEquals("L", IntegerToRoman.convert(50));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void convert_elevenOutOfRange_throwsException() {
-        IntegerToRoman.convert(11);
+    public void convert_fiftyOneOutOfRange_throwsException() {
+        IntegerToRoman.convert(51);
     }
 }

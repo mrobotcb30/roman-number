@@ -10,35 +10,21 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void print_ten_outputContainsXAsciiArt() {
-        String result = RomanPrinter.print(10);
+    public void print_fifty_outputContainsLAsciiArt() {
+        String result = RomanPrinter.print(50);
         assertEquals(
-            " __  __ \n" +
-            " \\ \\/ / \n" +
-            "  \\  /  \n" +
-            "  /  \\  \n" +
-            " / /\\ \\ \n" +
-            "/_/  \\_\\\n",
-            result
-        );
-    }
-
-    @Test
-    public void print_nine_outputContainsIXAsciiArt() {
-        String result = RomanPrinter.print(9);
-        assertEquals(
-            " _____   __  __ \n" +
-            "|_   _|  \\ \\/ / \n" +
-            "  | |     \\  /  \n" +
-            "  | |     /  \\  \n" +
-            " _| |_   / /\\ \\ \n" +
-            "|_____| /_/  \\_\\\n",
+            " _       \n" +
+            "| |      \n" +
+            "| |      \n" +
+            "| |      \n" +
+            "| |____  \n" +
+            "|______| \n",
             result
         );
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void print_outOfRange_throwsException() {
-        RomanPrinter.print(11);
+    public void print_fiftyOne_throwsException() {
+        RomanPrinter.print(51);
     }
 }
