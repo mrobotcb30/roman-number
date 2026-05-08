@@ -42,7 +42,6 @@ public class RomanPrinterTest {
         assertNotNull(result);
     }
 
-
     @Test
     public void print_four_returnsNonNullString() {
         // Arrange
@@ -133,30 +132,16 @@ public class RomanPrinterTest {
     public void print_six_outputContainsVIAsciiArt() {
         // Arrange
         int number = 6;
-
-    public void print_three_outputContainsIIIAsciiArt() {
-        // Arrange
-        int number = 3;
-
         // Act
         String result = RomanPrinter.print(number);
         // Assert
         assertEquals(
-
             "__   __  _____  \n" +
             "\\ \\ / / |_   _| \n" +
             " \\ V /    | |   \n" +
             "  > <     | |   \n" +
             " / . \\   _| |_  \n" +
             "/_/ \\_\\ |_____| \n",
-
-            " _____   _____   _____  \n" +
-            "|_   _| |_   _| |_   _| \n" +
-            "  | |     | |     | |   \n" +
-            "  | |     | |     | |   \n" +
-            " _| |_   _| |_   _| |_  \n" +
-            "|_____| |_____| |_____| \n",
-
             result
         );
     }
@@ -173,10 +158,3 @@ public class RomanPrinterTest {
         RomanPrinter.print(7);
     }
 }
-
-    public void print_fourOutOfRange_throwsException() {
-        // Dato che testiamo solo fino a 3, il 4 diventa il nuovo limite superiore
-        RomanPrinter.print(4);
-    }
-}
-
