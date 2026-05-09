@@ -113,21 +113,6 @@
             </execution>
           </executions>
         </plugin>
-
-        <!-- Invio Report a Coveralls.io -->
-        <plugin>
-          <groupId>org.eluder.coveralls</groupId>
-          <artifactId>coveralls-maven-plugin</artifactId>
-          <version>4.3.0</version>
-          <dependencies>
-            <!-- Risolve problemi di compatibilità del plugin con Java 11 -->
-            <dependency>
-              <groupId>javax.xml.bind</groupId>
-              <artifactId>jaxb-api</artifactId>
-              <version>2.3.1</version>
-            </dependency>
-          </dependencies>
-        </plugin>
       </plugins>
     </pluginManagement>
   </build>
