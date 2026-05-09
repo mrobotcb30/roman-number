@@ -34,12 +34,12 @@ jobs:
     - name: Static Code Analysis
       run: mvn checkstyle:check
 
-    #Coveralls
+    # Coveralls
     - name: Run Tests with Coverage
       run: mvn clean test jacoco:report
 
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2
       with:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
-      file: target/site/jacoco/jacoco.xml
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        file: target/site/jacoco/jacoco.xml
