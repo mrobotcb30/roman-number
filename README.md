@@ -171,6 +171,7 @@ L’obiettivo della pipeline è garantire:
 # 🔖 Status build
 
 ![build](https://github.com/mrobotcb30/roman-number/actions/workflows/build.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/mrobotcb30/roman-number/badge.svg?branch=main&v=3)](https://coveralls.io/github/mrobotcb30/roman-number?branch=main)
 ---
 
 # 🧪 Testing
