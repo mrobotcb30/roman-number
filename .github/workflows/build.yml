@@ -33,3 +33,7 @@ jobs:
     # Eseguita in fase di package come richiesto [cite: 69]
     - name: Static Code Analysis
       run: mvn checkstyle:check
+
+    #Coveralls
+    - name: 4 - Report Coveralls
+      run: mvn -B jacoco:report coveralls:report -DrepoToken=${{ secrets.COVERALLS_TOKEN }} --file pom.xml
