@@ -171,7 +171,10 @@ L’obiettivo della pipeline è garantire:
 # 🔖 Status build
 
 ![build](https://github.com/mrobotcb30/roman-number/actions/workflows/build.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/mrobotcb30/roman-number/badge.svg?branch=main)](https://coveralls.io/github/mrobotcb30/roman-number?branch=main)
+---
+## Copertura
+
+✅ [![Coverage Status](https://coveralls.io/repos/github/mrobotcb30/roman-number/badge.svg?branch=main)](https://coveralls.io/github/mrobotcb30/roman-number?branch=main)
 ---
 
 # 🧪 Testing
@@ -182,9 +185,6 @@ I test unitari sono stati sviluppati seguendo:
 - principi **A-TRIP**;
 - metodologia **Right-BICEP**.
 
-## Copertura
-
-✅ Code Coverage ≥ **85%**
 
 ## Convenzioni adottate
 
